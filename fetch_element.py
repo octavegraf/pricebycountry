@@ -2,10 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 import vpn_tester
-import retry_everything
+import retry
 import time
 
 vpn_disconnect = vpn_tester.vpn_disconnect
+retry_everything = retry.retry_everything
 
 # Fetch element
 def get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path):
