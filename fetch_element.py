@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import sys
 
 def get_text(url, selector_name, selector):
     response = requests.get(url)
@@ -12,17 +13,15 @@ def get_text(url, selector_name, selector):
         elif selector == "id":
             selector_name_tag = soup.find(id=selector_name)
         else:
-            return "Not class or id"
+            print("Not a class or id")
+            sys.exit(1)
 
         if selector_name_tag:
             selector_name_text = selector_name_tag.get_text().strip()
             return selector_name_text
         else:
-            return "Not found"
+            print("Class or id not found on the page")
+            sys.exit(1)
     else:
-        return "Failure : {}".format(response.status_code)
-
-url = 'https://www.spotify.com/fr/premium/'
-selector_name = 'Type__TypeElement-sc-goli3j-0 eRmZIa sc-37393cdd-0 VXEqi'
-selector = "class"
-print(get_text(url, selector_name, selector))
+        print("Failure : {}".format(response.status_code))
+        sys.exit(1)
