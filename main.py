@@ -1,40 +1,57 @@
 import config
 import fetch_element
+import csv_modifier
+import vpn_tester
 
 import os
-from pathlib import Path
-import subprocess
-import csv
 import sys
+from pathlib import Path
+import time
 
 openvpn = "openvpn/"
+
 computer_os = config.computer_os
 website_name = config.website_name 
-csv_path = config.csv_path
-vpn_name = config.vpn_name
-fetched_string = config.fetched_string
+url = config.url
+selector_name = config.selector_name
+selector = config.selector
+csv_path = config.csv_path + "/" + website_name + ".csv"
+first_column = config.first_column
+second_column = config.second_column
+wait = config.wait
+csv_line = []
+
+get_text = fetch_element.get_text
+new_file = csv_modifier.new_file
+add_line = csv_modifier.add_line
+vpn_connect = vpn_tester.vpn_connect
+vpn_disconnect = vpn_tester.vpn_disconnect
 
 # Verifying if OS well configurated
-if config != "linux" and config != "macos":
+if computer_os != "linux" and computer_os != "macos":
     print("Wrong OS. Please modify config.py")
     sys.exit(1)
 
-# Creating CSV file
-with open(csv_path, 'w', newline='') as csv_file:
-    writer = csv.writer(csv_file)
-    writer.writerows([vpn_name, fetched_string])
+vpn_disconnect(computer_os, "all VPNS.")
+time.sleep(wait)
 
-# Testing every VPN
-for openvpn_file in os.listdir(openvpn):
+# Creating CSV file
+csv_line = [first_column, second_column]
+new_file(csv_path, csv_line)
+
+
+
+# Listing and sorting all openvpn files
+openvpn_folder_list = [f for f in os.listdir(openvpn) if f.endswith('.ovpn')]
+openvpn_folder_list_sorted = sorted(openvpn_folder_list)
+
+# Testing every VPN in openvpn folder
+for openvpn_file in openvpn_folder_list_sorted:
     openvpn_file_path = os.path.join(openvpn, openvpn_file)
-    if os.path.isfile(openvpn_file_path) and openvpn_file.endswith(".ovpn"):
-        print("Current VPN:", openvpn_file)
-        if config == "linux":
-            subprocess.call(['sudo', 'openvpn', '--config', openvpn_file_path])
-        elif config == "macos":
-            subprocess.call(['tunblkctl', 'connect', '--wait', Path(openvpn_file).stem])
-        print(fetch_element.get_text(config.url, config.selector_name, config.selector))
-        if config == "linux":
-            subprocess.call(['killall', 'openvpn'])
-        elif config == "macos":
-            subprocess.call(['tunblkctl', 'disconnect'])
+    vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
+    fetch_text = ""
+    fetch_text = get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path)
+    csv_line = [Path(openvpn_file).stem, fetch_text]
+    add_line(csv_path,csv_line)
+    vpn_disconnect(computer_os, openvpn_file)
+    time.sleep(wait)
