@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import sys
 import vpn_tester
 import retry
 import time
@@ -9,11 +8,10 @@ vpn_disconnect = vpn_tester.vpn_disconnect
 retry_everything = retry.retry_everything
 
 # Fetch element
-def get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path):
+def get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn):
     try:
         response = requests.get(url)
     except requests.exceptions.RequestException as e:
-        already_worked = True
         return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -22,8 +20,7 @@ def get_text(url, selector_name, selector, computer_os, wait, openvpn_file, open
         elif selector == "id":
                 selector_name_tag = soup.find(id=selector_name)
         else:
-            print("Not a class or id")
-            sys.exit(1)
+            return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
 
         if selector_name_tag:
             selector_name_text = selector_name_tag.get_text().strip()
@@ -32,8 +29,13 @@ def get_text(url, selector_name, selector, computer_os, wait, openvpn_file, open
             print("Class or id not found on the page.")
             return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
     else:
-        print("Failed to connect. Retrying.")
-        vpn_tester.vpn_disconnect(computer_os, openvpn_file)
-        time.sleep(wait)
-        vpn_tester.vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
-        get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path)
+        print(f"Failed to connect to VPN. Retrying. {retry_vpn} attempts left.")
+        retry_vpn -= 1
+        if retry_vpn <= 0:
+            print("VPN can't connect. Skipping.")
+            return "VPN Fail."
+        else:
+            vpn_tester.vpn_disconnect(computer_os, openvpn_file)
+            time.sleep(wait)
+            vpn_tester.vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
+            get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn)

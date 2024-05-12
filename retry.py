@@ -28,7 +28,7 @@ def retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, se
             return selector_name_text
         else:
             print("Class or id not found on the page")
-            sys.exit(1)
+            return("Not found.")
 
     else:
         print("Failed. Leaving.")

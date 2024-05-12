@@ -19,13 +19,29 @@ csv_path = config.csv_path + "/" + website_name + ".csv"
 first_column = config.first_column
 second_column = config.second_column
 wait = config.wait
-csv_line = []
+retry_vpn = config.retry_vpn
+count_lines = 0
 
 get_text = fetch_element.get_text
-new_file = csv_modifier.new_file
-add_line = csv_modifier.add_line
+open_file = csv_modifier.open_file
 vpn_connect = vpn_tester.vpn_connect
 vpn_disconnect = vpn_tester.vpn_disconnect
+count_csv = csv_modifier.count_csv
+
+# Prototyping testing every VPN in openvpn folder
+def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines):
+    count_lines -= 1
+    for i in range(count_lines, len(openvpn_folder_list)):
+        openvpn_file = openvpn_folder_list[i]
+        openvpn_file_path = os.path.join(openvpn, openvpn_file)
+        vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
+        fetch_text = ""
+        fetch_text = get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn)
+        csv_line = [Path(openvpn_file).stem, fetch_text]
+        open_file(csv_path,csv_line, "a")
+        vpn_disconnect(computer_os, openvpn_file)
+        print("—————————————————————————————————")
+        time.sleep(wait)
 
 # Verifying if OS well configurated
 if computer_os != "linux" and computer_os != "macos":
@@ -33,25 +49,39 @@ if computer_os != "linux" and computer_os != "macos":
     sys.exit(1)
 
 vpn_disconnect(computer_os, "all VPNS.")
-time.sleep(wait)
-
-# Creating CSV file
-csv_line = [first_column, second_column]
-new_file(csv_path, csv_line)
-
-
 
 # Listing and sorting all openvpn files
 openvpn_folder_list = [f for f in os.listdir(openvpn) if f.endswith('.ovpn')]
-openvpn_folder_list_sorted = sorted(openvpn_folder_list)
+openvpn_folder_list = sorted(openvpn_folder_list)
 
-# Testing every VPN in openvpn folder
-for openvpn_file in openvpn_folder_list_sorted:
-    openvpn_file_path = os.path.join(openvpn, openvpn_file)
-    vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
-    fetch_text = ""
-    fetch_text = get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path)
-    csv_line = [Path(openvpn_file).stem, fetch_text]
-    add_line(csv_path,csv_line)
-    vpn_disconnect(computer_os, openvpn_file)
-    time.sleep(wait)
+
+
+# Verifying CSV file
+csv_line = [first_column, second_column]
+if os.path.isfile(csv_path):
+    count_lines = count_csv(csv_path, "rows")
+    if count_lines > 1:
+        pass
+    else:
+        open_file(csv_path, csv_line, "w")
+        count_lines = 1
+        fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines)
+else:
+    open_file(csv_path, csv_line, "w")
+    count_lines = 1
+    fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines)
+
+
+if count_lines < len(openvpn_folder_list):
+    while True:
+        user_input = input('Does this file completely fetched from different VPN? (y/n)')
+        if user_input == "y":
+            break
+        elif user_input == "n":
+            fetch_everything(count_lines)
+            break
+        else:
+            print("Invalid input. Please enter y (yes) or n (no).")
+
+count_lines = count_csv(csv_path, "rows")
+print(f"Finished fetching websites. File contain {count_lines} rows.")
