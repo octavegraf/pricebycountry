@@ -20,6 +20,7 @@ first_column = config.first_column
 second_column = config.second_column
 wait = config.wait
 retry_vpn = config.retry_vpn
+cookie = config.cookie
 count_lines = 0
 
 get_text = fetch_element.get_text
@@ -29,14 +30,14 @@ vpn_disconnect = vpn_tester.vpn_disconnect
 count_csv = csv_modifier.count_csv
 
 # Prototyping testing every VPN in openvpn folder
-def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines):
+def fetch_everything(url, selector_name, selector, computer_os, wait, retry_vpn, cookie, count_lines):
     count_lines -= 1
     for i in range(count_lines, len(openvpn_folder_list)):
         openvpn_file = openvpn_folder_list[i]
         openvpn_file_path = os.path.join(openvpn, openvpn_file)
         vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
         fetch_text = ""
-        fetch_text = get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn)
+        fetch_text = get_text(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn, cookie)
         csv_line = [Path(openvpn_file).stem, fetch_text]
         open_file(csv_path,csv_line, "a")
         vpn_disconnect(computer_os, openvpn_file)
@@ -65,11 +66,11 @@ if os.path.isfile(csv_path):
     else:
         open_file(csv_path, csv_line, "w")
         count_lines = 1
-        fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines)
+        fetch_everything(url, selector_name, selector, computer_os, wait, retry_vpn, cookie, count_lines)
 else:
     open_file(csv_path, csv_line, "w")
     count_lines = 1
-    fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines)
+    fetch_everything(url, selector_name, selector, computer_os, wait, retry_vpn, cookie, count_lines)
 
 
 if count_lines < len(openvpn_folder_list):
@@ -78,7 +79,7 @@ if count_lines < len(openvpn_folder_list):
         if user_input == "y":
             break
         elif user_input == "n":
-            fetch_everything(count_lines)
+            fetch_everything(url, selector_name, selector, computer_os, wait, retry_vpn, cookie, count_lines)
             break
         else:
             print("Invalid input. Please enter y (yes) or n (no).")

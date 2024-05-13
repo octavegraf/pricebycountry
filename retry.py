@@ -7,13 +7,13 @@ import time
 
 # Only executing when a BeautifulSoup Error apperaing
 
-def retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector) :
+def retry_everything(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, cookie) :
     print("An error appeared. Retrying.")
     vpn_tester.vpn_disconnect(computer_os, openvpn_file)
     time.sleep(wait)
     vpn_tester.vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
     try:
-        response = requests.get(url)
+        response = requests.get(url, cookies=cookie)
     except requests.exceptions.RequestException as e:
         return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
     if response.status_code == 200:
