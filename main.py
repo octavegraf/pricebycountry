@@ -20,6 +20,7 @@ first_column = config.first_column
 second_column = config.second_column
 wait = config.wait
 retry_vpn = config.retry_vpn
+method = config.method
 count_lines = 0
 
 get_text = fetch_element.get_text

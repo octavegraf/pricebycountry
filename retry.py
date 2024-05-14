@@ -13,7 +13,7 @@ def retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, se
     time.sleep(wait)
     vpn_tester.vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
     try:
-        response = requests.get(url)
+        response = requests.get(url, cookies={'': ''})
     except requests.exceptions.RequestException as e:
         return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
     if response.status_code == 200:
