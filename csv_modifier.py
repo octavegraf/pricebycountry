@@ -8,13 +8,14 @@ def open_file(csv_path, csv_line, method) :
         writer.writerow(csv_line)
     print("CSV file modified.")
 
+# Counting rows and columns CSV file
 def count_csv (csv_path, rows_columns) :
     with open(csv_path) as f:
         data = list(csv.reader(f))
     if rows_columns == "rows":
         return len(data)
     if rows_columns == "columns":
-        return len(data)
+        return len(data[0])
     else:
         print("Error : rows or columns not defined.")
         sys.exit(1)
