@@ -60,7 +60,7 @@ def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_fo
         driver.get(url)
         cookies_before = driver.get_cookies()
         user_input = input("Is the current element present on the page? (y to confirm) ")
-        if user_input() == "y":
+        if user_input == "y":
             cookies_after = driver.get_cookies()
             cookies = [cookie for cookie in cookies_after if cookie not in cookies_before]
             time.sleep(wait)
