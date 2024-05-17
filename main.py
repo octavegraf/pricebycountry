@@ -2,6 +2,7 @@ import config
 import fetch_element
 import csv_modifier
 import vpn_tester
+import chatgpt
 
 import os
 import sys
@@ -23,9 +24,15 @@ selector = config.selector
 csv_path = config.csv_path + "/" + website_name + ".csv"
 first_column = config.first_column
 second_column = config.second_column
+third_column = config.third_column
+fourth_column = config.fourth_column
 wait = config.wait
 retry_vpn = config.retry_vpn
 method = config.method
+input_price = config.input_price
+output_price = config.output_price
+model = config.model
+prompt = config.prompt
 
 get_text_bs = fetch_element.get_text_bs
 get_text_selenium = fetch_element.get_text_selenium
@@ -33,6 +40,10 @@ open_file = csv_modifier.open_file
 vpn_connect = vpn_tester.vpn_connect
 vpn_disconnect = vpn_tester.vpn_disconnect
 count_csv = csv_modifier.count_csv
+read_element_csv = csv_modifier.read_element_csv
+estimated_cost = chatgpt.estimated_cost
+get_price_format = chatgpt.get_price_format
+add_chatgpt_data = csv_modifier.add_chatgpt_data
 
 # Prototyping testing every VPN in openvpn folder
 def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, method):
@@ -48,8 +59,14 @@ def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_fo
         driver = webdriver.Chrome()
         driver.get(url)
         cookies_before = driver.get_cookies()
-        confirmation = input("Is the current element present on the page? (y to confirm) ")
-        if confirmation.lower() == "y":
+        user_input = input("Is the current element present on the page? (y to confirm) ")
+        if user_input() == "y":
+            cookies_after = driver.get_cookies()
+            cookies = [cookie for cookie in cookies_after if cookie not in cookies_before]
+            time.sleep(wait)
+            fetch_text = get_text_selenium(url, cookies, selector_element)
+            driver.quit()
+            lines = fetch_text.split('\n')
             print("Here are the lines of text found on the page:")
             for idx, line in enumerate(lines):
                 print(f"{idx+1}: {line}")
@@ -58,12 +75,6 @@ def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_fo
                 print("Invalid line number. Please choose a number within the range.")
                 line_number = int(input("Please enter the line number you want to fetch: "))
             line_number -= 1
-            cookies_after = driver.get_cookies()
-            driver.quit()
-            cookies = [cookie for cookie in cookies_after if cookie not in cookies_before]
-            time.sleep(wait)
-            fetch_text = get_text_selenium(url, cookies, selector_element)
-            lines = fetch_text.split('\n')
 
     for i in range(count_lines, len(openvpn_folder_list)):
         openvpn_file = openvpn_folder_list[i]
@@ -100,7 +111,7 @@ openvpn_folder_list = sorted(openvpn_folder_list)
 
 
 # Verifying CSV file
-csv_line = [first_column, second_column]
+csv_line = [first_column, second_column, third_column, fourth_column]
 if os.path.isfile(csv_path):
     count_lines = count_csv(csv_path, "rows")
     if count_lines > 1:
@@ -128,6 +139,29 @@ if count_lines < len(openvpn_folder_list):
 
 count_lines = count_csv(csv_path, "rows")
 print(f"Finished fetching websites. File contain {count_lines} rows.")
-count_columns = count_csv(csv_path, "columns")
-if count_columns == 2:
-    print("Price and currency are currently not separated. You can use ChatGPT")
+print("Please verify your file first, and correct errors if there is some.")
+count_lines = 1
+while count_lines < count_csv(csv_path, "rows"):
+    try: 
+        read_element_csv(csv_path, count_lines, 3)
+        print("debug")
+        count_lines += 1
+    except IndexError:
+        print("Price and currency are currently not separated. You can use ChatGPT to generate them in a correct format.")
+        lines_remaining = count_csv(csv_path, "rows") - count_lines
+        cost = estimated_cost(input_price, output_price, model, prompt, lines_remaining, url)
+        print(f"Estimated cost : {cost}$ [DON'T FORGET THAT REAL VALUE CAN BE DIFFERENT]")
+        while True:
+            user_input = input("Do you want to continue ? (y)")
+            if user_input == "y":
+                break
+            else:
+                print("Invalid input. Please enter y (yes).")
+        break
+
+while count_lines < count_csv(csv_path, "rows"):
+    fetched_content = read_element_csv(csv_path, count_lines, 1)
+    chatgpt_response = get_price_format(fetched_content, read_element_csv(csv_path, count_lines, 0))
+    add_chatgpt_data(csv_path, count_lines, chatgpt_response)
+    count_lines += 1
+print("Finished.")

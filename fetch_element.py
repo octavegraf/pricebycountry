@@ -25,8 +25,11 @@ def get_text_bs(url, selector_name, selector, computer_os, wait, openvpn_file, o
         elif selector == "id":
                 selector_name_tag = soup.find(id=selector_name)
         if selector_name_tag:
-            selector_name_text = selector_name_tag.get_text_bs().strip()
-            return selector_name_text
+            try:
+                selector_name_text = selector_name_tag.get_text().strip()
+                return selector_name_text
+            except TypeError as e:
+                return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
         else:
             print("Class or id not found on the page.")
             return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
