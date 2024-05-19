@@ -18,6 +18,7 @@ def retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, se
         return retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, selector_name, selector)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, 'html.parser')
+        time.sleep(wait)
         if selector == "class":
                 selector_name_tag = soup.find(class_=selector_name)
         elif selector == "id":

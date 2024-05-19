@@ -5,9 +5,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import NoSuchElementException
 import vpn_tester
 import retry
 import time
+import config
 
 vpn_disconnect = vpn_tester.vpn_disconnect
 retry_everything = retry.retry_everything
@@ -46,13 +48,24 @@ def get_text_bs(url, selector_name, selector, computer_os, wait, openvpn_file, o
             get_text_bs(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn)
 
 def get_text_selenium(url, cookies, selector_element):
+    wait = config.wait
+    cta = config.cta
     driver = webdriver.Chrome()
     driver.get(url)
     for cookie in cookies:
         driver.add_cookie(cookie)
-    time.sleep(2)
+    time.sleep(wait)
     driver.get(url)
-    time.sleep(1)
+    time.sleep(wait)
+    if cta != "":
+        try:
+            cta = driver.find_element(By.CSS_SELECTOR, cta)
+        except NoSuchElementException:
+            pass
+        else:
+            time.sleep(wait)
+            cta.click()
+            time.sleep(wait)
     try: 
         elements = WebDriverWait(driver, 10).until(
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector_element))
@@ -63,6 +76,6 @@ def get_text_selenium(url, cookies, selector_element):
         return("Not found.")
     selector_name_text = ""
     for element in elements:
-        selector_name_text += element.text
-        return(selector_name_text)
+        selector_name_text += element.text + "\n"
     driver.quit()
+    return selector_name_text.strip()

@@ -13,6 +13,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+
 
 openvpn = "openvpn/"
 
@@ -59,13 +61,12 @@ def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_fo
         driver = webdriver.Chrome()
         driver.get(url)
         cookies_before = driver.get_cookies()
-        user_input = input("Is the current element present on the page? (y to confirm) ")
-        if user_input == "y":
+        confirmation = input("Is the current element present on the page? (y to confirm) ")
+        if confirmation.lower() == "y":
             cookies_after = driver.get_cookies()
             cookies = [cookie for cookie in cookies_after if cookie not in cookies_before]
             time.sleep(wait)
             fetch_text = get_text_selenium(url, cookies, selector_element)
-            driver.quit()
             lines = fetch_text.split('\n')
             print("Here are the lines of text found on the page:")
             for idx, line in enumerate(lines):
@@ -73,8 +74,9 @@ def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_fo
             line_number = int(input("Please enter the line number you want to fetch: "))
             while line_number < 1 or line_number > len(lines):
                 print("Invalid line number. Please choose a number within the range.")
-                line_number = int(input("Please enter the line number you want to fetch: "))
+                line_number = int(input("Please enter the line number you want to fetch: \n"))
             line_number -= 1
+            driver.quit()
 
     for i in range(count_lines, len(openvpn_folder_list)):
         openvpn_file = openvpn_folder_list[i]
@@ -144,7 +146,6 @@ count_lines = 1
 while count_lines < count_csv(csv_path, "rows"):
     try: 
         read_element_csv(csv_path, count_lines, 3)
-        print("debug")
         count_lines += 1
     except IndexError:
         print("Price and currency are currently not separated. You can use ChatGPT to generate them in a correct format.")
@@ -162,6 +163,7 @@ while count_lines < count_csv(csv_path, "rows"):
 while count_lines < count_csv(csv_path, "rows"):
     fetched_content = read_element_csv(csv_path, count_lines, 1)
     chatgpt_response = get_price_format(fetched_content, read_element_csv(csv_path, count_lines, 0))
+    print(F"ChatGPT response : {chatgpt_response}")
     add_chatgpt_data(csv_path, count_lines, chatgpt_response)
     count_lines += 1
 print("Finished.")
