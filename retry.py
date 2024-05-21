@@ -25,7 +25,7 @@ def retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, se
                 selector_name_tag = soup.find(id=selector_name)
 
         if selector_name_tag:
-            selector_name_text = selector_name_tag.get_text_bs().strip()
+            selector_name_text = selector_name_tag.get_text().strip()
             return selector_name_text
         else:
             print("Class or id not found on the page")
@@ -33,4 +33,4 @@ def retry_everything(computer_os, wait, openvpn_file, openvpn_file_path, url, se
 
     else:
         print("Failed. Leaving.")
-        sys.exit(1)
+        return("Failed.")

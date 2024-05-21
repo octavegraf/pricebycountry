@@ -6,6 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.service import Service
+
 import vpn_tester
 import retry
 import time
@@ -50,14 +52,18 @@ def get_text_bs(url, selector_name, selector, computer_os, wait, openvpn_file, o
 def get_text_selenium(url, cookies, selector_element):
     wait = config.wait
     cta = config.cta
-    driver = webdriver.Chrome()
+    options = webdriver.ChromeOptions()
+    if config.hide_browser == True:
+        options.add_argument("--headless=new")
+    driver = webdriver.Chrome(options=options)
     driver.get(url)
-    for cookie in cookies:
-        driver.add_cookie(cookie)
-    time.sleep(wait)
-    driver.get(url)
-    time.sleep(wait)
+    if cookies != "":
+        for cookie in cookies:
+            driver.add_cookie(cookie)
+            time.sleep(wait)
+            driver.get(url)
     if cta != "":
+        time.sleep(wait)
         try:
             cta = driver.find_element(By.CSS_SELECTOR, cta)
         except NoSuchElementException:
@@ -71,7 +77,7 @@ def get_text_selenium(url, cookies, selector_element):
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector_element))
         )
     except TimeoutException as ex:
-        print("Class or id not found on the page")
+        print(F"Class or id not found on the page ({selector_element})")
         driver.quit()
         return("Not found.")
     selector_name_text = ""
