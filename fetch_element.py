@@ -82,8 +82,8 @@ def get_text_selenium(url, cookies, selector_element):
             time.sleep(wait)
             cta.click()
             time.sleep(wait)
+    time.sleep(wait)
     try:
-        time.sleep(wait)
         elements = WebDriverWait(driver, 10).until(
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, selector_element))
         )
