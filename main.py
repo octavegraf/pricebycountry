@@ -119,10 +119,8 @@ def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_fo
         elif method == "selenium":
             fetch_text = get_text_selenium(url, cookies, selector_element)
             lines = fetch_text.split('\n')
-            if 1 <= line_number <= len(lines):
-                fetch_text = lines[line_number]
-            else:
-                fetch_text = "Invalid line number, please try again."
+            fetch_text = lines[line_number]
+            print(F"Text found : {fetch_text}")
         csv_line = [Path(openvpn_file).stem, fetch_text]
         open_file(csv_path,csv_line, "a")
         count_lines += 1
