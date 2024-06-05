@@ -1,4 +1,4 @@
-name: Exchange Ratessssss
+name: Exchange Rates
 
 on:
   workflow_dispatch: {}
