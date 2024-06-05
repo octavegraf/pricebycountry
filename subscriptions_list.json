@@ -1,0 +1,24 @@
+{
+  "Subscriptions": [
+    {
+      "Path": "data/qobuz.json",
+      "Name": "Qobuz",
+      "Url": "https://www.qobuz.com/"
+    },
+    {
+      "Path": "data/youtube-premium.json",
+      "Name": "YouTube Premium",
+      "Url": "https://www.youtube.com/premium"
+    },
+    {
+      "Path": "data/netflix.json",
+      "Name": "Netflix",
+      "Url": "https://www.netflix.com/signup"
+    },
+    {
+      "Path": "data/spotify.json",
+      "Name": "Spotify",
+      "Url": "https://www.spotify.com/premium/"
+    }
+  ]
+}
