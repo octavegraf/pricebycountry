@@ -1,10 +1,10 @@
 name: Exchange Ratessssss
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
   push:
     branches:
-      - github-actions
+      - 'github-pages'
   schedule:
     - cron: '0 0 * * *'
 
