@@ -1,0 +1,44 @@
+name: List JSON Files on Push
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  parse-json-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Extract Name and URL from JSON files
+      run: |
+        echo '{' > subscriptions_list.json
+        echo '  "Subscriptions": [' >> subscriptions_list.json
+        find data -type f -name "*.json" | while read file; do
+          name=$(jq -r '.Name' "$file")
+          url=$(jq -r '.Url' "$file")
+          echo '    {' >> subscriptions_list.json
+          echo '      "Path": "'$file'",' >> subscriptions_list.json
+          echo '      "Name": "'$name'",' >> subscriptions_list.json
+          echo '      "Url": "'$url'"' >> subscriptions_list.json
+          echo '    },' >> subscriptions_list.json
+        done
+        sed -i '$ s/,$//' subscriptions_list.json  # Remove the last comma
+        echo '  ]' >> subscriptions_list.json
+        echo '}' >> subscriptions_list.json
+
+    - name: Add JSON data file to Git index
+      run: git add subscriptions_list.json
+
+    - name: Commit changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git commit -m 'Update JSON data' || { echo "Commit failed"; exit 0; }
+        git push || { echo "Push failed"; exit 0; }
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

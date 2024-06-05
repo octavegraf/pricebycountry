@@ -1,0 +1,126 @@
+{
+  "Name": "Qobuz",
+  "Url": "https://www.qobuz.com/",
+  "Removed": "False",
+  "Offers": [
+    {
+      "Studio": [
+        {
+          "Country": "ar",
+          "Price": 4.99,
+          "Currency": "USD"
+        },
+        {
+          "Country": "at",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "au",
+          "Price": 19.99,
+          "Currency": "USD"
+        },
+        {
+          "Country": "be",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "br",
+          "Price": 25.9,
+          "Currency": "BRL"
+        },
+        {
+          "Country": "ca",
+          "Price": 12.99,
+          "Currency": "USD"
+        },
+        {
+          "Country": "ch",
+          "Price": 17.99,
+          "Currency": "CHF"
+        },
+        {
+          "Country": "co",
+          "Price": 19390,
+          "Currency": "COP"
+        },
+        {
+          "Country": "dk",
+          "Price": 149.99,
+          "Currency": "DKK"
+        },
+        {
+          "Country": "es",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "fi",
+          "Price": 15.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "fr",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "ge",
+          "Price": 12.99,
+          "Currency": "GBP"
+        },
+        {
+          "Country": "ie",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "it",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "jp",
+          "Price": 1480,
+          "Currency": "JPY"
+        },
+        {
+          "Country": "lu",
+          "Price": 14.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "mx",
+          "Price": 149,
+          "Currency": "MXN"
+        },
+        {
+          "Country": "nl",
+          "Price": 15.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "no",
+          "Price": 159.99,
+          "Currency": "SEK"
+        },
+        {
+          "Country": "nz",
+          "Price": 21.99,
+          "Currency": "USD"
+        },
+        {
+          "Country": "pt",
+          "Price": 10.99,
+          "Currency": "EUR"
+        },
+        {
+          "Country": "se",
+          "Price": 12.99,
+          "Currency": "GBP"
+        }
+      ]
+    }
+  ]
+}

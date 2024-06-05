@@ -1,0 +1,13 @@
+@mixin mobile {
+    @media (min-width: 1024px) { @content; }
+  }
+  @mixin tablet {
+    @media (min-width: 768px) { @content; }
+  }
+  @mixin desktop {
+    @media (max-width: 320px) { @content; }
+  }
+
+$primary: #4689CC;
+$secondary: mix(black, $primary, 75%);
+$tertiary: mix(white, $primary, 75%);
