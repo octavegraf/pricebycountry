@@ -2,9 +2,6 @@ name: Exchange Rates
 
 on:
   workflow_dispatch: {}
-  push:
-    branches:
-      - 'github-pages'
   schedule:
     - cron: '0 0 * * *'
 
