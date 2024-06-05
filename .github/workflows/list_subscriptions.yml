@@ -1,4 +1,4 @@
-name: List JSON Files on Push
+name: List subscriptions on Push
 
 on:
   push:
