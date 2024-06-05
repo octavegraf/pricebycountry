@@ -14,15 +14,15 @@
 
 <body>
     <nav class="nav">
-    <div class="nav__wrapper">
-        <a href=""><img class="nav__logo" src="assets/logo.svg"></a>
-        <div class="nav__text-wrapper">
-            <a class="nav__link" href="#vpn">VPN</a>
-            <a class="nav__link" href="#list">List</a>
-            <a class="nav__link" href="">Setup</a>
-            <a class="nav__link-github" href="">Github<i class="fa-brands fa-github"></i></a>
+        <div class="nav__wrapper">
+            <a href=""><img class="nav__logo" src="assets/logo.svg"></a>
+            <div class="nav__text-wrapper">
+                <a class="nav__link" href="#vpn">VPN</a>
+                <a class="nav__link" href="#list">List</a>
+                <a class="nav__link" href="">Setup</a>
+                <a class="nav__link-github" href="">Github<i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
-    </div>
     </nav>
     <section class="hero">
         <div class="hero__text-wrapper">
@@ -47,44 +47,14 @@
     </section>
     <section class="subscriptions-list" id="list">
     </section>
-    <section class="footer"><h5 class="legal">The content provided on this site is for educational and entertainment purposes only. Please
-        do not violate the terms and conditions of any websites mentioned here or elsewhere. I am not legally
-        responsible for any actions you take based on the information or links provided on this site. If you want your
-        website to disappear from here, contact me.</h5></section>
+    <section class="footer">
+        <h5 class="legal">The content provided on this site is for educational and entertainment purposes only. Please
+            do not violate the terms and conditions of any websites mentioned here or elsewhere. I am not legally
+            responsible for any actions you take based on the information or links provided on this site. If you want
+            your
+            website to disappear from here, contact me.</h5>
+    </section>
 </body>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('subscriptions_list.json')
-        .then(response => response.json())
-        .then(data => {
-            const listSection = document.querySelector('.subscriptions-list');
-            const ul = document.createElement('ul');
-            ul.className = 'subscription-list__ul';
-
-            data.Subscriptions.forEach(file => {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                const img = document.createElement('img');
-
-                const url = new URL(file.Url);
-                const domain = url.hostname;
-
-                const fileNameWithoutExtension = file.Path.split('/').pop().replace('.json', '');
-
-                a.href = `subscription.html?file=${fileNameWithoutExtension}`;
-                img.src = `https://logo.clearbit.com/${domain}`;
-                img.alt = `${file.Name} logo`;
-                a.appendChild(img);
-                a.appendChild(document.createTextNode(file.Name));
-
-                li.appendChild(a);
-                ul.appendChild(li);
-            });
-
-            listSection.appendChild(ul);
-        })
-        .catch(error => console.error('Error loading subscription list:', error));
-});
-</script>
+<script src="js/index.js" type="text/javascript"></script>
 
 </html>
