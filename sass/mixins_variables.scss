@@ -1,12 +1,23 @@
-@mixin mobile {
-    @media (min-width: 1024px) { @content; }
+@mixin devices ($breakpoint) {
+
+  @if $breakpoint ==mobile {
+    @media only screen and (max-width: 767) {
+      @content;
+    }
   }
-  @mixin tablet {
-    @media (min-width: 768px) { @content; }
+
+  @if $breakpoint ==tablet {
+    @media only screen and (min-width: 768) {
+      @content;
+    }
   }
-  @mixin desktop {
-    @media (max-width: 320px) { @content; }
+
+  @if $breakpoint ==desktop {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
   }
+}
 
 $primary: #4689CC;
 $secondary: mix(black, $primary, 75%);

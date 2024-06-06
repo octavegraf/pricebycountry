@@ -2,9 +2,6 @@ name: Exchange Rates
 
 on:
   workflow_dispatch: {}
-  push:
-    branches:
-      - 'github-pages'
   schedule:
     - cron: '0 0 * * *'
 
@@ -15,6 +12,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        ref: github-pages
 
     - name: Call ExchangeRate-API and save response
       env:
@@ -23,10 +22,11 @@ jobs:
         curl -s "$API_URL" -o exchange_rates.json
         cat exchange_rates.json
 
-    - name: Commit and push changes
+    - name: Commit and push changes to github-pages branch
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout -b github-pages
         git add exchange_rates.json
         git commit -m 'Update exchange rates'
         git push origin github-pages

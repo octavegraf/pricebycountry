@@ -7,7 +7,7 @@ input[type=submit] {
 
 html {
     background: linear-gradient(145deg, mix(#000, $primary, 75%) 0%, black 100%) no-repeat;
-    width: 100%;
+    min-width: 100%;
     min-height: 100%;
     font-family: "League Spartan", sans-serif;
     color: white;
@@ -16,11 +16,11 @@ html {
 
     body {
         max-width: 77.5rem;
-        padding: 0 6.25rem 4.0625rem 6.25rem;
+        padding: 6.25rem 6.25rem 4.0625rem 6.25rem;
         display: flex;
         flex-direction: column;
         background-color: transparent;
-
+        
         a {
             color: white;
             text-decoration: none;
@@ -83,10 +83,9 @@ html {
 
         .hero {
             display: flex;
+            height: fit-content;
             align-items: center;
             flex-direction: row;
-            height: 100vh;
-
             &__img {
                 width: 50%;
             }
@@ -128,8 +127,10 @@ html {
             &__request {
                 width: 18.4375rem;
                 height: 4.5rem;
+                padding: 10px;
                 text-align: center;
                 display: flex;
+                flex-wrap: nowrap;
                 align-items: center;
                 justify-content: center;
                 font-family: "League Spartan", sans-serif;
@@ -184,13 +185,14 @@ html {
 
             ul {
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 justify-content: center;
-                gap: 5%;
+                gap: 20px;
                 overflow: hidden;
                 
                 li {
-                    width: 10%;
+                    width: 150px;
                     a {
                         position: relative;
                         aspect-ratio: 1/1;
@@ -198,6 +200,9 @@ html {
                         border-radius: 100%;
                         padding: 10%;
                         display: flex;
+                        flex-wrap: wrap;
+                        text-wrap: wrap;
+                        overflow-wrap: anywhere;
                         gap: 10px;
                         flex-direction: column;
                         align-items: center;
