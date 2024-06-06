@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const fileNameWithoutExtension = file.Path.split('/').pop().replace('.json', '');
 
-                a.href = `subscription.html?file=${fileNameWithoutExtension}`;
+                a.href = `subscription/?file=${fileNameWithoutExtension}`;
                 span.className = 'subscription-list__text-button';
                 span.textContent = file.Name;
 

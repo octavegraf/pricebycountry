@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const fileName = `data/${fileParam}.json`;
-    const exchangeRatesFile = 'exchange_rates.json';
+    const fileName = `../data/${fileParam}.json`;
+    const exchangeRatesFile = '../exchange_rates.json';
 
     fetch(exchangeRatesFile)
         .then(response => response.json())

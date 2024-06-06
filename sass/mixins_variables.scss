@@ -1,22 +1,17 @@
 @mixin devices ($breakpoint) {
 
   @if $breakpoint ==mobile {
-    @media only screen and (max-width: 767) {
+    @media only screen and (max-width: 320px) {
       @content;
     }
   }
 
   @if $breakpoint ==tablet {
-    @media only screen and (min-width: 768) {
+    @media only screen and (max-width: 992px) {
       @content;
     }
   }
 
-  @if $breakpoint ==desktop {
-    @media only screen and (min-width: 992px) {
-      @content;
-    }
-  }
 }
 
 $primary: #4689CC;
