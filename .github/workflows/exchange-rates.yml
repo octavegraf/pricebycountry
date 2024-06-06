@@ -2,6 +2,9 @@ name: Exchange Rates
 
 on:
   workflow_dispatch: {}
+  push:
+    branches:
+      - 'github-pages'
   schedule:
     - cron: '0 0 * * *'
 
@@ -26,6 +29,6 @@ jobs:
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add exchange_rates.json
         git commit -m 'Update exchange rates'
-        git push
+        git push origin github-pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
