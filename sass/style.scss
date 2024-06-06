@@ -1,5 +1,9 @@
 @import "minireset.scss";
 @import "mixins_variables.scss";
+input[type=submit] {
+    visibility:visible !important;
+    }
+   
 
 html {
     background: linear-gradient(145deg, mix(#000, $primary, 75%) 0%, black 100%) no-repeat;
@@ -98,9 +102,8 @@ html {
             &__h1,
             strong {
                 font-size: 5.375rem;
-                line-height: 1.5rem;
+                line-height: 5.375rem;
                 font-weight: 400;
-                line-height: normal;
                 width: 115%;
 
                 & strong {
@@ -110,7 +113,7 @@ html {
 
             &__h3 {
                 font-size: 1.5rem;
-                line-height: normal;
+                line-height: 1.5rem;
                 font-weight: 600;
 
             }
@@ -138,7 +141,7 @@ html {
             &__list {
                 background-color: $primary;
                 color: $secondary;
-                box-shadow: 0px 0px 100px 0px mix(#000, $primary, 45%);
+                box-shadow: 0px 0px 100px 0px mix(black, $primary, 45%);
             }
 
             &__request {
@@ -172,21 +175,43 @@ html {
             }
         }
 
-        .subscription_list {
-            &__ul {
+        .subscriptions-list {
+            border-radius: 20px;
+            outline: 1px solid $primary;
+            background-color: transparent;
+            box-shadow: 0px 0px 100px 0px $secondary;
 
-                li a{
-                    background-color: white;
-                    width: 1000px;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5%;
+                overflow: hidden;
+                
+                li {
+                    width: 10%;
+                    a {
+                        position: relative;
+                        aspect-ratio: 1/1;
+                        width: 100%;
+                        border-radius: 100%;
+                        padding: 10%;
+                        display: flex;
+                        gap: 10px;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        justify-content: center;
+                        background-color: $tertiary;
+                        color: $secondary;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: auto;
+                    }
+
                 }
-
             }
-
-
-        }
-
-        .legal {
-            font-size: 1rem;
         }
     }
 }

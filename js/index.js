@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data.Subscriptions.forEach(file => {
                 const li = document.createElement('li');
                 const a = document.createElement('a');
-                const img = document.createElement('img');
+                const span = document.createElement('span');
 
                 const url = new URL(file.Url);
                 const domain = url.hostname;
@@ -17,11 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const fileNameWithoutExtension = file.Path.split('/').pop().replace('.json', '');
 
                 a.href = `subscription.html?file=${fileNameWithoutExtension}`;
-                img.src = `https://logo.clearbit.com/${domain}`;
-                img.alt = `${file.Name} logo`;
-                a.appendChild(img);
-                a.appendChild(document.createTextNode(file.Name));
+                span.className = 'subscription-list__text-button';
+                span.textContent = file.Name;
 
+                a.appendChild(span);
                 li.appendChild(a);
                 ul.appendChild(li);
             });
