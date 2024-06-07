@@ -7,14 +7,9 @@ input[type=submit] {
 
 
 html {
-    background: linear-gradient(145deg, mix(#000, $primary, 75%) 0%, black 100%) no-repeat;
-    width: 100vw;
-    min-height: 100%;
+    background: linear-gradient(145deg, mix(#000, $primary, 75%) 0%, black 100%);
     font-family: "League Spartan", sans-serif;
     color: white;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
 
     @include devices(tablet) {
         text-align: center;
@@ -22,16 +17,25 @@ html {
 
     body {
         width: 100%;
+        max-width: 100vw;
+        height: 100%;
+        margin: auto;
         max-width: 77.5rem;
         padding: 6.25rem 6.25rem 0 6.25rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-color: transparent;
         overflow-x: hidden;
 
 
         @include devices(tablet) {
-            padding: 100px 30px 65px 30px;
+            padding: 70px 30px 0 30px;
+        }
+
+        @include devices(mobile) {
+            padding: 55px 20px 0 20px;
         }
 
         a {
@@ -45,6 +49,10 @@ html {
             @include devices(tablet) {
                 padding: 45px 0 45px 0;
             }
+
+            @include devices(mobile) {
+                padding: 20px 0 20px 0;
+            }
         }
 
         .nav {
@@ -52,7 +60,7 @@ html {
             top: 0;
             left: 0;
             width: 100%;
-            backdrop-filter: blur(20px) brightness(60%);
+            backdrop-filter: blur(20px) brightness(110%);
 
             &__wrapper {
                 max-width: 77.5rem;
@@ -68,19 +76,39 @@ html {
                     padding: 20px 30px 20px 30px;
 
                 }
+
+                @include devices(tablet) {
+                    padding: 10px 20px 10px 20px;
+
+                }
             }
 
             &__logo {
                 width: 2.8125rem;
+
+                @include devices(tablet) {
+                    max-width: 2.8125rem;
+                }
+
+                @include devices(mobile) {
+                    max-width: 30px;
+                }
             }
 
 
             &__text-wrapper {
                 display: inline-flex;
                 align-items: center;
+                justify-content: flex-end;
                 gap: 2.5rem;
+
                 @include devices(tablet) {
-                    gap: 10%;
+                    width: 100%;
+                }
+                @include devices(mobile) {
+                    width: fit-content;
+                    gap: 15px;
+                    justify-content: space-between;
                 }
 
             }
@@ -92,14 +120,24 @@ html {
                     border-radius: 50px;
                     color: black;
                     box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
+                    @include devices(mobile) {
+                        background: none;
+                        padding: 0;
+                        border-radius: 0;
+                        color: white;
+                        box-shadow: none;
+                    }
 
                     i {
                         font-size: 0.875rem;
                         margin-left: 0.3125rem;
+
+                        @include devices(mobile) {
+                            display: none;
+                        }
                     }
                 }
             }
-
 
         }
 
@@ -131,8 +169,13 @@ html {
                 flex-direction: column;
                 gap: 4.0625rem;
                 width: 520px;
+
                 @include devices(tablet) {
-                width: 100%;
+                    width: 100%;
+                }
+
+                @include devices(mobile) {
+                    gap: 20px;
                 }
 
             }
@@ -144,8 +187,13 @@ html {
                 font-weight: 400;
 
                 @include devices(tablet) {
-                    font-size: 60px;
-                    line-height: 60px;
+                    font-size: 3.75rem;
+                    line-height: 3.75rem;
+                }
+
+                @include devices(mobile) {
+                    font-size: 36px;
+                    line-height: 36px;
                 }
 
                 & strong {
@@ -157,11 +205,10 @@ html {
                 font-size: 1.5rem;
                 line-height: 1.5rem;
                 font-weight: 600;
+                
             }
 
-            &__h1 {
-
-            }
+            &__h1 {}
 
             &__buttons-wrapper {
                 display: flex;
@@ -169,7 +216,8 @@ html {
                 gap: 20px;
 
                 @include devices(tablet) {
-                    flex-direction: column;
+                    width: 100%;
+                    flex-wrap: wrap;
                     align-items: center;
                     justify-content: center;
                 }
@@ -189,6 +237,10 @@ html {
                 font-size: 1.5rem;
                 font-weight: 400;
                 border-radius: 50px;
+                @include devices(mobile) {
+                    width: 80vw;
+                    height: 50px;
+                }
             }
 
             &__list {
@@ -213,6 +265,10 @@ html {
 
             &__h2 {
                 font-size: 3.375rem;
+                @include devices(mobile) {
+                    font-size: 36px;
+                    line-height: 36px;
+                }
             }
 
             &__button {
