@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const domain = new URL(data.Url).hostname;
                     const logoUrl = `https://logo.clearbit.com/${domain}`;
                     const name = data.Name;
-                    const url = data.Url;
+                    const url = data.Url.replace(/^https?:\/\/(www\.)?/, ''); // Remove http://, https://, and www.
 
                     document.title = `PriceByCountry - ${name}`;
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     h1.textContent = name;
 
                     const link = infosSection.querySelector('.infos__link');
-                    link.href = url;
+                    link.href = data.Url; // Keep the original URL for the href attribute
                     link.textContent = url;
 
                     const offers = [];

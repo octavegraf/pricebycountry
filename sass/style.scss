@@ -25,7 +25,6 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         background-color: transparent;
         overflow-x: hidden;
 
@@ -331,6 +330,52 @@ html {
                     }
 
                 }
+            }
+        }
+
+        .infos {
+            &__wrapper {
+                width: fit-content;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: baseline;
+                gap: 20px;
+            }
+            
+            &__h1 {
+                font-size: 76px;
+                line-height: 4.75rem;
+                font-weight: 400;
+
+                @include devices(tablet) {
+                    font-size: 3.75rem;
+                    line-height: 3.75rem;
+                }
+
+                @include devices(mobile) {
+                    font-size: 36px;
+                    line-height: 36px;
+                }
+            }
+
+            &__logo {
+                width: 50px;
+                border-radius: 5px;
+            }
+
+            &__link {
+                font-size: 24px;
+            }
+        }
+        .prices {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            &__card {
+                background-color: black;
+                width: 400px;
+                display: flex;
+                flex-direction: column;
             }
         }
     }
