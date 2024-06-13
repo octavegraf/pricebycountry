@@ -16,20 +16,21 @@ jobs:
 
     - name: Extract Name and URL from JSON files
       run: |
-        echo '{' > subscriptions_list.json
-        echo '  "Subscriptions": [' >> subscriptions_list.json
+        # Create an empty list to hold JSON objects
+        jq -n '[]' > temp_list.json
+        
+        # Collect JSON objects and append to the list
         find data -type f -name "*.json" | while read file; do
           name=$(jq -r '.Name' "$file")
           url=$(jq -r '.Url' "$file")
-          echo '    {' >> subscriptions_list.json
-          echo '      "Path": "'$file'",' >> subscriptions_list.json
-          echo '      "Name": "'$name'",' >> subscriptions_list.json
-          echo '      "Url": "'$url'"' >> subscriptions_list.json
-          echo '    },' >> subscriptions_list.json
+          jq --arg path "$file" --arg name "$name" --arg url "$url" '. + [{Path: $path, Name: $name, Url: $url}]' temp_list.json > temp_list.json.tmp && mv temp_list.json.tmp temp_list.json
         done
-        sed -i '$ s/,$//' subscriptions_list.json  # Remove the last comma
-        echo '  ]' >> subscriptions_list.json
-        echo '}' >> subscriptions_list.json
+        
+        # Sort the list by Name
+        jq 'sort_by(.Name)' temp_list.json > sorted_list.json
+
+        # Create the final JSON structure
+        jq '{Subscriptions: .}' sorted_list.json > subscriptions_list.json
 
     - name: Add JSON data file to Git index
       run: git add subscriptions_list.json
