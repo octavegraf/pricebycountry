@@ -3,6 +3,7 @@ import subprocess
 from pathlib import Path
 
 def vpn_connect(computer_os, openvpn_file ,openvpn_file_path):
+    print("debug : connexion")
     if os.path.isfile(openvpn_file_path) and openvpn_file.endswith(".ovpn"):
         if computer_os == "linux":
             subprocess.call(['sudo', 'openvpn', '--config', openvpn_file_path])
