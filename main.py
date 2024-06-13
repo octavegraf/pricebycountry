@@ -9,9 +9,6 @@ import sys
 from pathlib import Path
 import time
 
-import requests
-from bs4 import BeautifulSoup
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -33,14 +30,12 @@ third_column = config.third_column
 fourth_column = config.fourth_column
 wait = config.wait
 retry_vpn = config.retry_vpn
-method = config.method
 input_price = config.input_price
 output_price = config.output_price
 model = config.model
 prompt = config.prompt
 cookie = config.cookie
 
-get_text_bs = fetch_element.get_text_bs
 get_text_selenium = fetch_element.get_text_selenium
 open_file = csv_modifier.open_file
 vpn_connect = vpn_tester.vpn_connect
@@ -52,75 +47,51 @@ get_price_format = chatgpt.get_price_format
 add_chatgpt_data = csv_modifier.add_chatgpt_data
 
 # Prototyping testing every VPN in openvpn folder
-def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, method, cookie):
+def fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, cookie):
     count_lines -= 1
-    if method == "selenium":
-        if selector == "class":
-            selector = "."
-        elif selector == "id":
-            selector = "#"
-        selector_name = selector_name.split()
-        selector_element = [selector + selector_word for selector_word in selector_name]
-        selector_element = ' '.join(selector_element)
-        options = webdriver.ChromeOptions()
-        if config.hide_browser == True:
-            options.add_argument("--headless=new")
-        driver = webdriver.Chrome(options=options)
-        driver.get(url)
-        cookies = cookies_after = cookies_before = ""
-        cookies_before = driver.get_cookies()
-        if cookie == True:
-            confirmation = input("Is the current element present on the page? (y to confirm) ")
-            if confirmation.lower() == "y":
-                cookies_after = driver.get_cookies()
-                cookies = [cookie for cookie in cookies_after if cookie not in cookies_before]
-        elif cookie == False:
-                cookies = ""
-        time.sleep(wait)
-        fetch_text = get_text_selenium(url, cookies, selector_element)
-        driver.quit()
-        lines = fetch_text.split('\n')
-        print("Here are the lines of text found on the page:")
-        for idx, line in enumerate(lines):
-            print(f"{idx+1}: {line}")
-        line_number = int(input("Please enter the line number you want to fetch: "))
-        while line_number < 1 or line_number > len(lines):
-            print("Invalid line number. Please choose a number within the range.")
-            line_number = int(input("Please enter the line number you want to fetch: \n"))
-        line_number -= 1
-    
-    if method == "beautifulsoup":
-        response = requests.get(url)
-        if response.status_code == 200:
-            soup = BeautifulSoup(response.text, 'html.parser')
-            if selector == "class":
-                    selector_name_tag = soup.find(class_=selector_name)
-            elif selector == "id":
-                    selector_name_tag = soup.find(id=selector_name)
-            if selector_name_tag:
-                selector_name_text = selector_name_tag.get_text().strip()
-                print(F"Here is the result : {selector_name_text}")
-        while True:
-            user_input = input("Do you want to continue ? (y)")
-            if user_input == "y":
-                break
-            else:
-                print("Invalid input. Please enter y (yes).")
-
-
+    if selector == "class":
+        selector = "."
+    elif selector == "id":
+        selector = "#"
+    selector_name = selector_name.split()
+    selector_element = [selector + selector_word for selector_word in selector_name]
+    selector_element = ' '.join(selector_element)
+    options = webdriver.ChromeOptions()
+    if config.hide_browser == True:
+        options.add_argument("--headless=new")
+    driver = webdriver.Chrome(options=options)
+    driver.get(url)
+    cookies = cookies_after = cookies_before = ""
+    cookies_before = driver.get_cookies()
+    if cookie == True:
+        confirmation = input("Is the current element present on the page? (y to confirm) ")
+        if confirmation.lower() == "y":
+            cookies_after = driver.get_cookies()
+            cookies = [cookie for cookie in cookies_after if cookie not in cookies_before]
+    elif cookie == False:
+            cookies = ""
+    time.sleep(wait)
+    fetch_text = get_text_selenium(url, cookies, selector_element)
+    driver.quit()
+    lines = fetch_text.split('\n')
+    print("Here are the lines of text found on the page:")
+    for idx, line in enumerate(lines):
+        print(f"{idx+1}: {line}")
+    line_number = int(input("Please enter the line number you want to fetch: "))
+    while line_number < 1 or line_number > len(lines):
+        print("Invalid line number. Please choose a number within the range.")
+        line_number = int(input("Please enter the line number you want to fetch: \n"))
+    line_number -= 1
 
     for i in range(count_lines, len(openvpn_folder_list)):
         openvpn_file = openvpn_folder_list[i]
         openvpn_file_path = os.path.join(openvpn, openvpn_file)
         vpn_connect(computer_os, openvpn_file ,openvpn_file_path)
         fetch_text = ""
-        if method == "beautifulsoup":
-            fetch_text = get_text_bs(url, selector_name, selector, computer_os, wait, openvpn_file, openvpn_file_path, retry_vpn)
-        elif method == "selenium":
-            fetch_text = get_text_selenium(url, cookies, selector_element)
-            lines = fetch_text.split('\n')
-            fetch_text = lines[line_number]
-            print(F"Text found : {fetch_text}")
+        fetch_text = get_text_selenium(url, cookies, selector_element)
+        lines = fetch_text.split('\n')
+        fetch_text = lines[line_number]
+        print(F"Text found : {fetch_text}")
         csv_line = [Path(openvpn_file).stem, fetch_text]
         open_file(csv_path,csv_line, "a")
         count_lines += 1
@@ -150,11 +121,11 @@ if os.path.isfile(csv_path):
     else:
         open_file(csv_path, csv_line, "w" )
         count_lines = 1
-        fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, method, cookie)
+        fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, cookie)
 else:
     open_file(csv_path, csv_line, "w")
     count_lines = 1
-    fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, method, cookie)
+    fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, cookie)
 
 count_lines = count_csv(csv_path, "rows")
 if count_lines < len(openvpn_folder_list):
@@ -163,7 +134,7 @@ if count_lines < len(openvpn_folder_list):
         if user_input == "y":
             break
         elif user_input == "n":
-            fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, method, cookie)
+            fetch_everything(url, selector_name, selector, computer_os, wait, openvpn_folder_list, retry_vpn, count_lines, cookie)
             break
         else:
             print("Invalid input. Please enter y (yes) or n (no).")
