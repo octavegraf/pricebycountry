@@ -34,9 +34,6 @@ hide_browser = False
 
 ########### CSV File ###########
 
-# CSV path folder
-csv_path = "fetched"
-
 # Columns in CSV
 first_column = "Country"
 second_column = "Fetched Element"
