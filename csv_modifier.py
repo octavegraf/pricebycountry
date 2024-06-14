@@ -1,6 +1,5 @@
 import csv
 import sys
-import ast
 
 # Creating CSV file
 def open_file(csv_path, csv_line, method):
