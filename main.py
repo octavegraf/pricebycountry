@@ -16,14 +16,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 
-openvpn = "openvpn/"
+openvpn = os.path.join(os.path.dirname(__file__), 'openvpn')
 
 computer_os = config.computer_os
 website_name = config.website_name
 url = config.url
 selector_name = config.selector_name
 selector = config.selector
-csv_path = config.csv_path + "/" + website_name + ".csv"
+csv_path = os.path.join(os.path.dirname(__file__), 'fetched') + "/" + website_name + ".csv"
 first_column = config.first_column
 second_column = config.second_column
 third_column = config.third_column
