@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.title = `PriceByCountry - ${name}`;
 
+        const metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        metaDescription.content = `You can find the price for ${name} in every country.`;
+        document.head.appendChild(metaDescription);
+
         const logo = infosSection.querySelector('.infos__logo');
         logo.src = logoUrl;
         logo.alt = `${name} Logo`;
