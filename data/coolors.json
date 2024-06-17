@@ -31,14 +31,9 @@
                     "Currency": "AUD"
                 },
                 {
-                    "Country": "az",
-                    "Price": 5.0,
-                    "Currency": "AZD"
-                },
-                {
                     "Country": "bd",
                     "Price": 5.0,
-                    "Currency": "BDT"
+                    "Currency": "USD"
                 },
                 {
                     "Country": "be",
@@ -113,7 +108,7 @@
                 {
                     "Country": "dz",
                     "Price": 5.0,
-                    "Currency": "DZD"
+                    "Currency": "USD"
                 },
                 {
                     "Country": "ec",
@@ -206,11 +201,6 @@
                     "Currency": "JPY"
                 },
                 {
-                    "Country": "kh",
-                    "Price": 5.0,
-                    "Currency": "KH1"
-                },
-                {
                     "Country": "km",
                     "Price": 5.0,
                     "Currency": "USD"
@@ -293,7 +283,7 @@
                 {
                     "Country": "ng",
                     "Price": 5.0,
-                    "Currency": "NGN"
+                    "Currency": "USD"
                 },
                 {
                     "Country": "nl",
@@ -328,7 +318,7 @@
                 {
                     "Country": "pk",
                     "Price": 5.0,
-                    "Currency": "PKR"
+                    "Currency": "USD"
                 },
                 {
                     "Country": "pl",
@@ -436,7 +426,7 @@
                     "Currency": "UAH"
                 },
                 {
-                    "Country": "uk",
+                    "Country": "gb",
                     "Price": 4.0,
                     "Currency": "GBP"
                 },
@@ -446,14 +436,9 @@
                     "Currency": "USD"
                 },
                 {
-                    "Country": "ve",
-                    "Price": 1500.0,
-                    "Currency": "USD"
-                },
-                {
                     "Country": "vn",
                     "Price": 5.0,
-                    "Currency": "VND"
+                    "Currency": "USD"
                 },
                 {
                     "Country": "za",

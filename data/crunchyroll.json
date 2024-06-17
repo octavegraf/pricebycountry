@@ -7,7 +7,7 @@
             "Mega Fan Monthly": [
                 {
                     "Country": "ae",
-                    "Price": 1900.0,
+                    "Price": 19.00,
                     "Currency": "AED"
                 },
                 {
@@ -142,7 +142,7 @@
                 },
                 {
                     "Country": "ge",
-                    "Price": 800.0,
+                    "Price": 8.0,
                     "Currency": "GEL"
                 },
                 {
@@ -407,7 +407,7 @@
                 },
                 {
                     "Country": "tw",
-                    "Price": 7500.0,
+                    "Price": 75,
                     "Currency": "TWD"
                 },
                 {
@@ -416,7 +416,7 @@
                     "Currency": "USD"
                 },
                 {
-                    "Country": "uk",
+                    "Country": "gb",
                     "Price": 5.99,
                     "Currency": "GBP"
                 },

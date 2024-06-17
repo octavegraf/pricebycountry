@@ -83,7 +83,7 @@
                 {
                     "Country": "co",
                     "Price": 16900.0,
-                    "Currency": "USD"
+                    "Currency": "COP"
                 },
                 {
                     "Country": "cr",
@@ -391,7 +391,7 @@
                     "Currency": "USD"
                 },
                 {
-                    "Country": "uk",
+                    "Country": "gb",
                     "Price": 10.99,
                     "Currency": "GBP"
                 },
@@ -407,7 +407,7 @@
                 },
                 {
                     "Country": "vn",
-                    "Price": 65.0,
+                    "Price": 65000,
                     "Currency": "VND"
                 }
             ]
