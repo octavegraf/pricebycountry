@@ -1,9 +1,39 @@
 {
   "Subscriptions": [
     {
+      "Path": "data/apple-music.json",
+      "Name": "Apple Music",
+      "Url": "https://www.apple.com/apple-music/"
+    },
+    {
+      "Path": "data/coolors.json",
+      "Name": "Coolors",
+      "Url": "https://coolors.co/pricing"
+    },
+    {
+      "Path": "data/crunchyroll.json",
+      "Name": "Crunchyroll",
+      "Url": "https://www.crunchyroll.com/premium"
+    },
+    {
+      "Path": "data/google-one.json",
+      "Name": "Google One",
+      "Url": "https://one.google.com/about/plans"
+    },
+    {
+      "Path": "data/microsoft-365.json",
+      "Name": "Microsoft 365",
+      "Url": "https://www.microsoft.com/microsoft-365/buy/compare-all-microsoft-365-products"
+    },
+    {
       "Path": "data/netflix.json",
       "Name": "Netflix",
       "Url": "https://www.netflix.com/signup"
+    },
+    {
+      "Path": "data/playstation-plus.json",
+      "Name": "PlayStation Plus",
+      "Url": "https://www.playstation.com/ps-plus/"
     },
     {
       "Path": "data/qobuz.json",
@@ -14,6 +44,11 @@
       "Path": "data/spotify.json",
       "Name": "Spotify",
       "Url": "https://www.spotify.com/premium/"
+    },
+    {
+      "Path": "data/xbox-game-pass.json",
+      "Name": "Xbox Game Pass",
+      "Url": "https://www.xbox.com/xbox-game-pass"
     },
     {
       "Path": "data/youtube-premium.json",
