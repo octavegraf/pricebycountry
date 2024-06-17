@@ -1,10 +1,10 @@
 {
-    "Name": "Name",
-    "Url": "Url",
+    "Name": "Microsoft 365",
+    "Url": "https://www.microsoft.com/microsoft-365/buy/compare-all-microsoft-365-products",
     "Removed": "False",
     "Offers": [
         {
-            "Premium": [
+            "Personal Monthly": [
                 {
                     "Country": "al",
                     "Price": 7.0,

@@ -1,10 +1,10 @@
 {
-    "Name": "Name",
-    "Url": "Url",
+    "Name": "Xbox Game Pass",
+    "Url": "https://www.xbox.com/xbox-game-pass",
     "Removed": "False",
     "Offers": [
         {
-            "Premium": [
+            "Console Core Monthly": [
                 {
                     "Country": "ae",
                     "Price": 6.99,
