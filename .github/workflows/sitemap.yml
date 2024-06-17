@@ -3,7 +3,7 @@ name: Generate Sitemap
 on:
   push:
     branches:
-      - main 
+      - github-pages 
 
 jobs:
   build:
