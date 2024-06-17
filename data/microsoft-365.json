@@ -13,7 +13,7 @@
                 {
                     "Country": "ar",
                     "Price": 2599.0,
-                    "Currency": "USD"
+                    "Currency": "ARS"
                 },
                 {
                     "Country": "at",
@@ -78,7 +78,7 @@
                 {
                     "Country": "co",
                     "Price": 25999.0,
-                    "Currency": "USD"
+                    "Currency": "COP"
                 },
                 {
                     "Country": "cr",
@@ -318,7 +318,7 @@
                 {
                     "Country": "rs",
                     "Price": 759.0,
-                    "Currency": "USD"
+                    "Currency": "RSD"
                 },
                 {
                     "Country": "rw",

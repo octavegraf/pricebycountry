@@ -53,7 +53,7 @@
                 {
                     "Country": "ca",
                     "Price": 11.99,
-                    "Currency": "USD"
+                    "Currency": "CAD"
                 },
                 {
                     "Country": "ch",
@@ -67,8 +67,8 @@
                 },
                 {
                     "Country": "co",
-                    "Price": 21.9,
-                    "Currency": "USD"
+                    "Price": 21900,
+                    "Currency": "COP"
                 },
                 {
                     "Country": "cr",
