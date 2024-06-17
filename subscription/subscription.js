@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const headerRow = document.createElement('tr');
             const headerCountry = document.createElement('th');
-            headerCountry.textContent = 'Country';
+            headerCountry.textContent = '🏳️ Country';
             const headerPrice = document.createElement('th');
             headerPrice.textContent = 'Price';
             headerRow.appendChild(headerCountry);
