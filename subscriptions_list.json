@@ -46,6 +46,11 @@
       "Url": "https://www.spotify.com/premium/"
     },
     {
+      "Path": "data/x-twitter.json",
+      "Name": "X (Twitter)",
+      "Url": "https://x.com/i/premium_sign_up"
+    },
+    {
       "Path": "data/xbox-game-pass.json",
       "Name": "Xbox Game Pass",
       "Url": "https://www.xbox.com/xbox-game-pass"
