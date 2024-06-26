@@ -1,0 +1,796 @@
+{
+    "Name": "X (Twitter)",
+    "Url": "https://x.com/i/premium_sign_up",
+    "Removed": "False",
+    "Offers": [
+        {
+            "Basic (Monthly)": [
+                {
+                    "Country": "US",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GB",
+                    "Price": 3.0,
+                    "Currency": "GBP"
+                },
+                {
+                    "Country": "CA",
+                    "Price": 3.75,
+                    "Currency": "CAD"
+                },
+                {
+                    "Country": "AU",
+                    "Price": 4.88,
+                    "Currency": "AUD"
+                },
+                {
+                    "Country": "NZ",
+                    "Price": 4.88,
+                    "Currency": "NZD"
+                },
+                {
+                    "Country": "JP",
+                    "Price": 368.0,
+                    "Currency": "JPY"
+                },
+                {
+                    "Country": "BR",
+                    "Price": 15.75,
+                    "Currency": "BRL"
+                },
+                {
+                    "Country": "ID",
+                    "Price": 33750.0,
+                    "Currency": "IDR"
+                },
+                {
+                    "Country": "IN",
+                    "Price": 243.75,
+                    "Currency": "INR"
+                },
+                {
+                    "Country": "SA",
+                    "Price": 11.25,
+                    "Currency": "SAR"
+                },
+                {
+                    "Country": "FR",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "DE",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ES",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "IT",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "PT",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "NL",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "PL",
+                    "Price": 13.5,
+                    "Currency": "PLN"
+                },
+                {
+                    "Country": "IE",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "BE",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "SE",
+                    "Price": 31.13,
+                    "Currency": "SEK"
+                },
+                {
+                    "Country": "RO",
+                    "Price": 13.88,
+                    "Currency": "RON"
+                },
+                {
+                    "Country": "CZ",
+                    "Price": 67.13,
+                    "Currency": "CZK"
+                },
+                {
+                    "Country": "FI",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "DK",
+                    "Price": 21.0,
+                    "Currency": "DKK"
+                },
+                {
+                    "Country": "GR",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "AT",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "HU",
+                    "Price": 1068.75,
+                    "Currency": "HUF"
+                },
+                {
+                    "Country": "BG",
+                    "Price": 5.63,
+                    "Currency": "BGN"
+                },
+                {
+                    "Country": "LT",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "SK",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "LV",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "SI",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "EE",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "HR",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "LU",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "MT",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "CY",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "TR",
+                    "Price": 56.25,
+                    "Currency": "TRY"
+                },
+                {
+                    "Country": "MX",
+                    "Price": 54.38,
+                    "Currency": "MXN"
+                },
+                {
+                    "Country": "TH",
+                    "Price": 103.13,
+                    "Currency": "THB"
+                },
+                {
+                    "Country": "PH",
+                    "Price": 165.0,
+                    "Currency": "PHP"
+                },
+                {
+                    "Country": "ZA",
+                    "Price": 54.38,
+                    "Currency": "ZAR"
+                },
+                {
+                    "Country": "AR",
+                    "Price": 3,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "KR",
+                    "Price": 3900.0,
+                    "Currency": "KRW"
+                },
+                {
+                    "Country": "EG",
+                    "Price": 91.87,
+                    "Currency": "EGP"
+                },
+                {
+                    "Country": "NG",
+                    "Price": 1368.75,
+                    "Currency": "NGN"
+                },
+                {
+                    "Country": "MY",
+                    "Price": 13.13,
+                    "Currency": "MYR"
+                },
+                {
+                    "Country": "CO",
+                    "Price": 14437.5,
+                    "Currency": "COP"
+                },
+                {
+                    "Country": "CL",
+                    "Price": 1828.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "SG",
+                    "Price": 4.13,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "AE",
+                    "Price": 10.88,
+                    "Currency": "AED"
+                },
+                {
+                    "Country": "UA",
+                    "Price": 3.0,
+                    "Currency": "UAH"
+                },
+                {
+                    "Country": "KE",
+                    "Price": 412.5,
+                    "Currency": "KES"
+                },
+                {
+                    "Country": "IL",
+                    "Price": 10.88,
+                    "Currency": "IL"
+                },
+                {
+                    "Country": "DO",
+                    "Price": 3.0,
+                    "Currency": "DO"
+                },
+                {
+                    "Country": "CH",
+                    "Price": 2.63,
+                    "Currency": "CHF"
+                },
+                {
+                    "Country": "IS",
+                    "Price": 420.0,
+                    "Currency": "ISK"
+                },
+                {
+                    "Country": "NO",
+                    "Price": 31.13,
+                    "Currency": "NOK"
+                },
+                {
+                    "Country": "AF",
+                    "Price": 3.0,
+                    "Currency": "AFD"
+                },
+                {
+                    "Country": "AL",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "DZ",
+                    "Price": 3.0,
+                    "Currency": "DZD"
+                },
+                {
+                    "Country": "AO",
+                    "Price": 3.0,
+                    "Currency": "AO"
+                },
+                {
+                    "Country": "AI",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "AG",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "AM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "AW",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "AZ",
+                    "Price": 3.0,
+                    "Currency": "AZD"
+                },
+                {
+                    "Country": "BS",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BH",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BD",
+                    "Price": 318.75,
+                    "Currency": "BDT"
+                },
+                {
+                    "Country": "BB",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BY",
+                    "Price": 3.0,
+                    "Currency": "BYV"
+                },
+                {
+                    "Country": "BZ",
+                    "Price": 3.0,
+                    "Currency": "BZD"
+                },
+                {
+                    "Country": "BJ",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BT",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BO",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BA",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "BW",
+                    "Price": 3.0,
+                    "Currency": "BW"
+                },
+                {
+                    "Country": "VG",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BN",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "BF",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "KH",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "CM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "CV",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "KY",
+                    "Price": 3.0,
+                    "Currency": "KY"
+                },
+                {
+                    "Country": "CF",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "TD",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "KM",
+                    "Price": 3.0,
+                    "Currency": "KM"
+                },
+                {
+                    "Country": "CD",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "CG",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "CR",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "CI",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "DJ",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "DM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "EC",
+                    "Price": 3.0,
+                    "Currency": "EC"
+                },
+                {
+                    "Country": "SV",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GQ",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ER",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "FJ",
+                    "Price": 3.0,
+                    "Currency": "FJD"
+                },
+                {
+                    "Country": "GA",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GE",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GH",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GD",
+                    "Price": 3.0,
+                    "Currency": "GD"
+                },
+                {
+                    "Country": "GT",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GW",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "GY",
+                    "Price": 3.0,
+                    "Currency": "GY"
+                },
+                {
+                    "Country": "HT",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "HN",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "HK",
+                    "Price": 3.0,
+                    "Currency": "HKD"
+                },
+                {
+                    "Country": "IQ",
+                    "Price": 3.0,
+                    "Currency": "IQD"
+                },
+                {
+                    "Country": "JM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "JO",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "KZ",
+                    "Price": 3.0,
+                    "Currency": "KZT"
+                },
+                {
+                    "Country": "KW",
+                    "Price": 3.0,
+                    "Currency": "KWD"
+                },
+                {
+                    "Country": "KG",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "LA",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "LB",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "LR",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "LY",
+                    "Price": 3.0,
+                    "Currency": "LY"
+                },
+                {
+                    "Country": "LI",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MO",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MG",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MW",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MV",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ML",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MR",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MU",
+                    "Price": 3.0,
+                    "Currency": "MU"
+                },
+                {
+                    "Country": "FM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MD",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MN",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ME",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MS",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MA",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MZ",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "NA",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "NR",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "NP",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "NI",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "NE",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "MK",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "OM",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "PK",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "PW",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "PA",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "PG",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "PY",
+                    "Price": 3.0,
+                    "Currency": "PYG"
+                },
+                {
+                    "Country": "PE",
+                    "Price": 11.25,
+                    "Currency": "PEN"
+                },
+                {
+                    "Country": "QA",
+                    "Price": 10.88,
+                    "Currency": "IRR"
+                },
+                {
+                    "Country": "RW",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "WS",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "SM",
+                    "Price": 3.0,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ST",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "SN",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "RS",
+                    "Price": 3.0,
+                    "Currency": "USD"
+                }
+            ]
+        }
+    ]
+}
