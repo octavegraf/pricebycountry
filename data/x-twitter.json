@@ -1,6 +1,6 @@
 {
     "Name": "X (Twitter)",
-    "Url": "https://x.com/i/premium_sign_up",
+    "Url": "https://twitter.com/i/premium_sign_up",
     "Removed": "False",
     "Offers": [
         {
@@ -82,8 +82,8 @@
                 },
                 {
                     "Country": "co",
-                    "Price": 12854.0,
-                    "Currency": "COA"
+                    "Price": 12854,
+                    "Currency": "COP"
                 },
                 {
                     "Country": "cr",
@@ -442,7 +442,7 @@
                 },
                 {
                     "Country": "vn",
-                    "Price": 632.0,
+                    "Price": 63200,
                     "Currency": "VND"
                 },
                 {
