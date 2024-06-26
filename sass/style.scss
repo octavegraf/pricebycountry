@@ -286,12 +286,7 @@ html {
                 background-color: white;
                 padding: 30px;
                 border-radius: 50px;
-                background-image: url(../assets/protonvpn_logo.svg);
-                background-position: center;
-                background-size: 60%;
-                background-repeat: no-repeat;
                 box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.2);
-
             }
 
             .legal {
@@ -306,6 +301,12 @@ html {
             box-shadow: 0px 0px 100px 0px $secondary;
             padding: 60px 20px 60px 20px;
 
+            @include devices(tablet) {
+                background-image: url(../assets/hero_banner.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
 
             ul {
                 display: flex;
@@ -314,6 +315,7 @@ html {
                 justify-content: center;
                 gap: 20px;
                 overflow: hidden;
+                height: fi;
 
                 li {
                     width: 120px;
@@ -337,6 +339,9 @@ html {
                         font-size: 18px;
                         font-weight: 500;
                         line-height: auto;
+                        @include devices(tablet) {
+                            border: 1px solid $secondary;
+                        }
                     }
 
                 }
