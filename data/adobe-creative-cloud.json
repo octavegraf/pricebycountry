@@ -1,0 +1,905 @@
+{
+    "Name": "Adobe Creative Cloud",
+    "Url": "https://www.adobe.com/creativecloud",
+    "Removed": "False",
+    "Offers": [
+        {
+            "Individuals": [
+                {
+                    "Country": "ae",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "al",
+                    "Price": 66.45,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ar",
+                    "Price": 6803.83,
+                    "Currency": "ARS"
+                },
+                {
+                    "Country": "at",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "az",
+                    "Price": 35.69,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "bd",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "be",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "bg",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "br",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "bt",
+                    "Price": 77.73,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "by",
+                    "Price": 68.68,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ca",
+                    "Price": 78.99,
+                    "Currency": "CAD"
+                },
+                {
+                    "Country": "ch",
+                    "Price": 65.95,
+                    "Currency": "CHF"
+                },
+                {
+                    "Country": "cl",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "co",
+                    "Price": 113669.0,
+                    "Currency": "COP"
+                },
+                {
+                    "Country": "cr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "cy",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "cz",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "de",
+                    "Price": 66.45,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "dk",
+                    "Price": 262.0,
+                    "Currency": "DKK"
+                },
+                {
+                    "Country": "dz",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ec",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ee",
+                    "Price": 68.12,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "eg",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "es",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "fi",
+                    "Price": 69.24,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "fr",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "gb",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ge",
+                    "Price": 35.69,
+                    "Currency": "EUR."
+                },
+                {
+                    "Country": "gr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "hk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "hr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "hu",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "id",
+                    "Price": 346080.0,
+                    "Currency": "IDR"
+                },
+                {
+                    "Country": "ie",
+                    "Price": 68.68,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "il",
+                    "Price": 205.0,
+                    "Currency": "ILS"
+                },
+                {
+                    "Country": "in",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "is",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "it",
+                    "Price": 36.59,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "jp",
+                    "Price": 7780.0,
+                    "Currency": "JPY"
+                },
+                {
+                    "Country": "kh",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "km",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "kr",
+                    "Price": 78100.0,
+                    "Currency": "KRW"
+                },
+                {
+                    "Country": "lk",
+                    "Price": 77.73,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "lt",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "lu",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "lv",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ma",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "md",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mm",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mr",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "mt",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mu",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "mx",
+                    "Price": 1249.0,
+                    "Currency": "MXN"
+                },
+                {
+                    "Country": "my",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mz",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ng",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "nl",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "no",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "np",
+                    "Price": 77.73,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "nz",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pe",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ph",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pl",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pt",
+                    "Price": 68.68,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "qa",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ro",
+                    "Price": 35.69,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "rs",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "rw",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "se",
+                    "Price": 736.25,
+                    "Currency": "SEK"
+                },
+                {
+                    "Country": "sg",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "si",
+                    "Price": 68.12,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "sk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "sn",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ss",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "sv",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "td",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "tg",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "th",
+                    "Price": 78100.0,
+                    "Currency": "KRW"
+                },
+                {
+                    "Country": "tr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "tw",
+                    "Price": 1785.0,
+                    "Currency": "TWD"
+                },
+                {
+                    "Country": "ua",
+                    "Price": 69.59,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "us",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ve",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "vn",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "za",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                }
+            ]
+        },
+        {
+            "Students & teachers": [
+                {
+                    "Country": "ae",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "al",
+                    "Price": 66.45,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ar",
+                    "Price": 6803.83,
+                    "Currency": "ARS"
+                },
+                {
+                    "Country": "at",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "az",
+                    "Price": 35.69,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "bd",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "be",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "bg",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "br",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "bt",
+                    "Price": 77.73,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "by",
+                    "Price": 68.68,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ca",
+                    "Price": 78.99,
+                    "Currency": "CAD"
+                },
+                {
+                    "Country": "ch",
+                    "Price": 65.95,
+                    "Currency": "CHF"
+                },
+                {
+                    "Country": "cl",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "co",
+                    "Price": 113669.0,
+                    "Currency": "COP"
+                },
+                {
+                    "Country": "cr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "cy",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "cz",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "de",
+                    "Price": 66.45,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "dk",
+                    "Price": 262.0,
+                    "Currency": "DKK"
+                },
+                {
+                    "Country": "dz",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ec",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ee",
+                    "Price": 68.12,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "eg",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "es",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "fi",
+                    "Price": 69.24,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "fr",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "gb",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ge",
+                    "Price": 35.69,
+                    "Currency": "EUR."
+                },
+                {
+                    "Country": "gr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "hk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "hr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "hu",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "id",
+                    "Price": 346080.0,
+                    "Currency": "IDR"
+                },
+                {
+                    "Country": "ie",
+                    "Price": 68.68,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "il",
+                    "Price": 205.0,
+                    "Currency": "ILS"
+                },
+                {
+                    "Country": "in",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "is",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "it",
+                    "Price": 36.59,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "jp",
+                    "Price": 7780.0,
+                    "Currency": "JPY"
+                },
+                {
+                    "Country": "kh",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "km",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "kr",
+                    "Price": 78100.0,
+                    "Currency": "KRW"
+                },
+                {
+                    "Country": "lk",
+                    "Price": 77.73,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "lt",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "lu",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "lv",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ma",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "md",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mm",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mr",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "mt",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mu",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "mx",
+                    "Price": 1249.0,
+                    "Currency": "MXN"
+                },
+                {
+                    "Country": "my",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "mz",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ng",
+                    "Price": 67.57,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "nl",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "no",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "np",
+                    "Price": 77.73,
+                    "Currency": "SGD"
+                },
+                {
+                    "Country": "nz",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pe",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ph",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pl",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "pt",
+                    "Price": 68.68,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "qa",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ro",
+                    "Price": 35.69,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "rs",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "rw",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "se",
+                    "Price": 736.25,
+                    "Currency": "SEK"
+                },
+                {
+                    "Country": "sg",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "si",
+                    "Price": 68.12,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "sk",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "sn",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "ss",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "sv",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "td",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                },
+                {
+                    "Country": "tg",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "th",
+                    "Price": 78100.0,
+                    "Currency": "KRW"
+                },
+                {
+                    "Country": "tr",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "tw",
+                    "Price": 1785.0,
+                    "Currency": "TWD"
+                },
+                {
+                    "Country": "ua",
+                    "Price": 69.59,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "us",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "ve",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "vn",
+                    "Price": 59.99,
+                    "Currency": "USD"
+                },
+                {
+                    "Country": "za",
+                    "Price": 67.01,
+                    "Currency": "EUR"
+                }
+            ]
+        }
+    ]
+}
