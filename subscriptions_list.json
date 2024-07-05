@@ -1,6 +1,11 @@
 {
   "Subscriptions": [
     {
+      "Path": "data/adobe-creative-cloud.json",
+      "Name": "Adobe Creative Cloud",
+      "Url": "https://www.adobe.com/creativecloud"
+    },
+    {
       "Path": "data/apple-music.json",
       "Name": "Apple Music",
       "Url": "https://www.apple.com/apple-music/"
